@@ -1,0 +1,20 @@
+    base
+    config
+    negative
+    pages
+    regression
+    smoke
+    testdata
+    utils
+    {pages,utils,base}
+    {smoke,regression,negative}
+    {testdata,config}
+   java
+   java
+   resources
+  main
+  test
+ logs
+ screenshots
+ src
+.

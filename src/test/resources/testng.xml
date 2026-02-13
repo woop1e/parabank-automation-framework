@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParaBank Automation Test Suite" verbose="1">
+    
+    <listeners>
+        <!-- Add custom listeners here if needed -->
+    </listeners>
+
+    <!-- Smoke Test Suite -->
+    <test name="Smoke Tests" preserve-order="true">
+        <classes>
+            <class name="smoke.SmokeTests">
+                <methods>
+                    <include name="testHomepageLoadsSuccessfully"/>
+                    <include name="testValidLogin"/>
+                    <include name="testLogoutFunctionality"/>
+                    <include name="testAccountOverviewPageLoads"/>
+                    <include name="testTransferFundsValidTransaction"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Regression Test Suite -->
+    <test name="Regression Tests" preserve-order="true">
+        <classes>
+            <class name="regression.RegressionTests">
+                <methods>
+                    <include name="testRegistrationNewUserSuccess"/>
+                    <include name="testBillPaymentSuccessful"/>
+                    <include name="testTransferFundsInsufficientBalance"/>
+                    <include name="testRegistrationDuplicateUsername"/>
+                    <include name="testNavigationMenuLinks"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Negative Test Suite -->
+    <test name="Negative Tests" preserve-order="true">
+        <classes>
+            <class name="negative.NegativeTests">
+                <methods>
+                    <include name="testLoginInvalidCredentials"/>
+                    <include name="testRegistrationEmptyRequiredFields"/>
+                    <include name="testBillPaymentInvalidAmountFormat"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
